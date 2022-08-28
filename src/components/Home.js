@@ -1,10 +1,11 @@
 import React from 'react';
 import { FaEdit, FaDownload, FaSuitcase, FaPencilAlt, FaKey, FaAddressCard, FaWhatsappSquare, FaFacebook, FaTwitter } from 'react-icons/fa';
+import FlagApp from './FlagApp'
 
 const Home = () => {
   return (
     <div className='App'>
-      <h1 className='head left-align'>Need More Viewers For Your WhatsApp Status?</h1>
+      <h1 className='head left-align lh10'>Need More Viewers For Your WhatsApp Status?</h1>
       <hr className='line' />
       <section className='about'>
         <p className='fs20 left-align lh15'>
@@ -35,7 +36,7 @@ const Home = () => {
       </table>
       {/* </section> */}
       <section>
-        <h1 className='left-align'>Go Premium</h1>
+        <p className='left-align fs42 b600'>Go Premium</p>
         <table className='table fs16 left-align'>
           <tr className='bac-gr wh-txt'>
             <th>Free</th>
@@ -68,7 +69,7 @@ const Home = () => {
         </table>
       </section>
       <section>
-        <h1 className='left-align'>Procedures</h1>
+        <p className='left-align fs42 b600'>Procedures</p>
         <div className='mini-box'>
         <div className='wrap'>
           <FaSuitcase className='proc-icon' />
@@ -112,10 +113,10 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className='mini-box'>
+      <section className='mini-box mt400'>
         <div className='wrap'> 
-        <h1 className='left-align'>Submit your name and number</h1>
-        <p>
+        <p className='left-align fs34 b600'>Submit your name and number</p>
+        <p className='left-align mt100'>
           Submit your name and number to be compiled for download by yourself
           and others
         </p>
@@ -124,7 +125,7 @@ const Home = () => {
             <label htmlFor='f' className='label'>
               Package Type:
             </label>
-            <select type='select' className='pac-type'>
+            <select type='select' className='pac-type sub-input'>
               <option value='free' className='pac-input'>
                 Free
               </option>
@@ -143,7 +144,7 @@ const Home = () => {
             <label htmlFor='f' className='label'>
               Phone Number:
             </label>
-            <input className='sub-input' type='text' placeholder='Phone number'/>
+            <FlagApp />
           </div>
           <button className='form-btn'>Submit</button>
         </form>
@@ -151,14 +152,14 @@ const Home = () => {
       </section>
       <section className='mini-box-share'>
         <div className='wrap'>
-          <p>Would you like to share with your friends?</p>
-          <textarea className='input-share'>
+          <p className='left-align b600'>Would you like to share with your friends?</p>
+          <textarea className='input-share' rows={5} cols={3} style={{padding: '1rem'}}>
           Are You Tired of Getting Embarrassing WhatsApp Status Views? 😳😳🤷🏻‍♂️🤷🏻‍♂️
 👉https://johndoe .com
           </textarea>
         </div>
         <div>
-          <p>Or use the share buttons below</p>
+          <p className='b600'>Or use the share buttons below</p>
           <div>
             <FaWhatsappSquare className='share-icon'/>
             <FaFacebook className='share-icon'/>
@@ -167,31 +168,43 @@ const Home = () => {
         </div>
       </section>
       <section className='mini-box-share'>
-        <div className='wrap'>
-          <h1>Blocked Contacts</h1>
-          <p className='left-align'>Here is a list of the last 5 blocked contacts who have been found violating our rules and will therefore not be included in future compilations</p>
-      <table>
+        <div className='wrap mt300'>
+          <h1 className='left-align'>Blocked Contacts</h1>
+          <p className='left-align b600'>Here is a list of the last 5 blocked contacts who have been found violating our rules and will therefore not be included in future compilations</p>
+      <table className='mt200'>
         <tr className='tr-blocked'>
-          <td className='td-blocked'>ffhe</td>
+          <td className='td-blocked b600'>Name & Phone number:</td>
         </tr>
         <tr className='tr-blocked'>
-          <td className='td-blocked'>he</td>
+          <td className='td-blocked b600'>Name & Phone number:</td>
         </tr>
         <tr className='tr-blocked'>
-          <td className='td-blocked'>he</td>
+          <td className='td-blocked b600'>Name & Phone number:</td>
         </tr>
         <tr className='tr-blocked'>
-          <td className='td-blocked'>he</td>
+          <td className='td-blocked b600'>Name & Phone number:</td>
         </tr>
         <tr className='tr-blocked'>
-          <td className='td-blocked'>he</td>
+          <td className='td-blocked b600'>Name & Phone number:</td>
         </tr>
-        
       </table>
       <hr />
-        
         </div>
       </section>
+      <section className='mini-box-share'>
+      <div className='wrap mt300'>
+      <h1 className='left-align'>Report Contacts</h1> 
+      <p className='left-align b600'>If you think any WV contact has acted badly and you want us to look into it, kindly submit their phone number here</p>
+      <input className='sub-input mt100' type='number' placeholder="Enter contact's phone number" />
+      <textarea className='sub-input mt150' rows={4} cols={5} placeholder='Tell us why you are reporting this contact'></textarea>
+      <button className='form-btn mt300'>Report</button>
+      </div>
+      </section>
+      <div>
+        <p className='fs34 left-align b600 mt200 lh10'>Build Your Personalized Whatsapp Audience</p>
+        <p className='left-align fs20 mt100'>Check out WassapViews Creators meant for businesses like yours</p>
+        <button className='form-btn mt100 btn-sm' style={{width: '80%'}}>Become a WassapViews Creator</button>
+      </div>
     </div>
   );
 };
