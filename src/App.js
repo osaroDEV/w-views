@@ -10,6 +10,9 @@ import TOS from './components/TOS'
 import ContactUs from './components/Contactus'
 import Header from './components/Header'
 import Footer from './components/Footer'
+import Login from './components/Login'
+// import Footer from './components/Footer'
+import Register from './components/Register'
 
 function App() {
   return (
@@ -39,6 +42,8 @@ function App() {
       <Route path='/howto' element={<Howto />}/>
       <Route path='/tos' element={<TOS />}/>
       <Route path='/contactus' element={<ContactUs />}/>
+      <Route path='/login' element={<Login />}/>
+      <Route path='/register' element={<Register />}/>
 
     </Routes>
     <Footer />
