@@ -4,11 +4,34 @@
   box-sizing: border-box;
 }
 
+:root {
+  /* colors */
+  --hd-color: #bb1450;
+  
+  /* margins */
+  --mg-25: 0.25em;
+  --mg-5: 0.5em;
+  --mg-10: 1em;
+  --mg-20: 2em;
+  --mg-ctr: 0 auto;
+
+  /* font sizes */
+  --fs-5: 0.5rem;
+  --fs-10: 1rem;
+  --fs-20: 2rem;
+  --fs-30: 3rem;
+
+  /* positioning */
+  --pos-025: 0.25em;
+  --pos-05: 0.5em;
+  --pos-10: 1em;
+  --pos-20: 2em;
+  --pos-30: 3em;
+}
+
 .App {
   text-align: center;
   padding: 0 1rem;
-  background-color: #ededed;
-  color: #343a40;
 }
 
 .App-link {
@@ -29,6 +52,9 @@
 .f16 {} */
 
 /* boldness */
+.b400 {
+  font-weight: 400;
+}
 .b600 {
   font-weight: 600;
 }
@@ -44,6 +70,87 @@
 /* text */
 .wh-txt {
   color: #fff
+}
+
+/* header -----------------------------------------*/
+.header {
+  position: relative;
+  height: 4em;
+  border-bottom: 2px solid;
+  z-index: 1000;
+}
+
+/* menu modal */
+.modal-container {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  width: 100%;
+  height: 0%;
+  transition: all 0.3s ease-in-out 0s;
+  z-index: 200;
+}
+
+.full-modal-container {
+  height: 100vh;
+}
+
+.modal-content {
+  display: none;
+  /* display: flex; */
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  /* opacity: 0; */
+  height: 40%;
+  font-size: 1.75rem;
+  font-weight: 900;
+  transition: all 0.5s ease 0s;
+  z-index: 500;
+}
+
+.full-modal-content {
+  display: flex;
+}
+
+
+@media (min-width: 750px) {
+  .modal-container {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    width: 40%;
+    height: auto;
+    transition: none;
+  }
+  .modal-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-size: 0.8rem;
+    font-weight: 900;
+    transition: none;
+  }
+
+  .modal-container a {
+    padding: 0.5em 0.75em;
+    color: inherit;
+  }
+
+}
+
+@media (orientation: landscape) {
+  .modal-content {
+    justify-content: space-around;
+    font-weight: 400;
+    height: 60%;
+  }
 }
 
 section {
@@ -175,6 +282,28 @@ ul li {
   text-align: left;
 }
 
+.user-box {
+  border: none;
+}
+
+.user-btn {
+  /* position: fixed; */
+  width: 35%;
+  /* right: 1rem; */
+}
+
+.user-bottom-flex {
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-end;
+}
+
+.user-rem-flex {
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-start;
+}
+
 /* margins */
 .mt50 {
   margin-top: .5rem;
@@ -193,6 +322,10 @@ ul li {
 }
 .mt400 {
   margin-top: 4rem;
+}
+
+.mr50 {
+  margin-right: .5rem;
 }
 
 .form {
@@ -275,8 +408,12 @@ ul li {
   text-align: left;
 }
 
+.right-align {
+  text-align: right;
+}
+
 .green {
-  color: green;
+  color: #02B875;
 }
 
 
@@ -316,14 +453,56 @@ select option {
 .country {
 width: 50%;
 }
+
 .flag {
 width: 15%;
 height: auto;
 }
-/* .code {
 
+.full-height {
+  height: 100vh;
 }
-.fnum {
 
-} */
+.full-width {
+  width: 100%;
+}
 
+/* hamburger */
+.hamburger-container {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: var(--pos-05);
+  color: inherit;
+  cursor: pointer;
+  z-index: 2000;
+}
+
+.hamburger-container:visited {
+  border: 1px solid red;
+}
+
+@media (min-width: 750px) {
+  .hamburger-container {
+    display: none;
+  }
+}
+
+/* links menu */
+.menu-icon {
+  font-size: var(--fs-20);
+}
+
+/* menu modal */
+.modal-container {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  width: 100%;
+  height: 0%;
+  transition: all 0.3s ease-in-out 0s;
+  z-index: 200;
+}
