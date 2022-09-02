@@ -2,16 +2,16 @@ import React, { useState } from 'react';
 import { CgMenuLeft, CgClose } from 'react-icons/cg';
 
 const Hamburger = () => {
-  const [ modalOpen, setModalOpen ] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false)
 
   return (
     <div
-      className='hamburger-container'
+      className='hamburger-container flex'
     >
       {modalOpen ? (
-        <CgClose className='menu-icon' onClick={() => setModalOpen(false)} />
+        <CgClose className='menu-icon' onClick={() => setModalOpen(!modalOpen)} />
       ) : (
-        <CgMenuLeft className='menu-icon' onClick={() => setModalOpen(true)} />
+        <CgMenuLeft className='menu-icon' onClick={() => setModalOpen(!modalOpen)} />
       )}
     </div>
   );

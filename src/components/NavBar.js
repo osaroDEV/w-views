@@ -5,9 +5,11 @@ const NavBar = () => {
   const [modalOpen, setModalOpen] = useState(false);
 
   return (
-    <section 
-    className={`modal-container ${modalOpen ? 'full-modal-container' : ''}`} onClick={() => setModalOpen(true)}>
-    <nav>
+    <>
+    
+    <section>
+   
+    {modalOpen ? (<nav className={`modal-container ${modalOpen ? 'full-modal-container' : ''}`} onClick={() => setModalOpen(true)}>
     <ul className={`modal-content ${modalOpen ? 'full-modal-content' : ''}`} onClick={() => setModalOpen(true)}>
       <li 
       onClick={() => setModalOpen(false)}
@@ -55,8 +57,10 @@ const NavBar = () => {
         <Link to='/register'>Register</Link>
       </li>
     </ul>
-  </nav>
-    </section>
+  </nav>) : ''}
+  {/* <h1>NAVBAR</h1> */}
+    </section> 
+    </>
   );
 };
 

@@ -506,3 +506,10 @@ height: auto;
   transition: all 0.3s ease-in-out 0s;
   z-index: 200;
 }
+
+.flex {
+  display: flex;
+  height: 35px;
+  width: 150px;
+  border: 1px solid;
+}
