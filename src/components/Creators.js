@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom'
 // import { FaSuitcase, FaPencilAlt, FaKey, FaAddressCard, FaWhatsappSquare, FaFacebook, FaTwitter } from 'react-icons/fa';
 
 const Creators = () => {
@@ -7,8 +8,8 @@ const Creators = () => {
       <p className='fs30 b600'>Build your personal WhatsApp contact list with WassapViews Creators</p>
       <section className='about'>
         <p className='fs20 mt100'>The easiest way to build your WhatsApp contact list, get people to save yours and also get to save thousands of contacts anywhere in the world</p>
-        <button>CREATE ACCOUNT</button>
-        <button>LOGIN</button>
+        <Link to='/register'><button>CREATE ACCOUNT</button></Link>
+        <Link to='/login'><button>LOGIN</button></Link>
       </section>
       <section>
           <p className='fs30 b600'>Save and be Saved Easily</p>
@@ -34,8 +35,8 @@ const Creators = () => {
                       <p className='mt50'>Start growing your contact list, our dashboard provides a rich interface to help you manage your contacts effeciently.</p>
                   </div>
               </div>
-              <button>CREATE ACCOUNT</button>
-        <button>LOGIN</button>
+              <Link to='/register'><button>CREATE ACCOUNT</button></Link>
+              <Link to='/login'><button>LOGIN</button></Link>
           </div>
       </section>
     </div>

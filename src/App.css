@@ -72,6 +72,14 @@
   color: #fff
 }
 
+/* underline */
+.under {
+  text-decoration: underline;
+}
+.no-under {
+  text-decoration: none;
+}
+
 /* header -----------------------------------------*/
 .header {
   position: relative;
@@ -105,8 +113,8 @@
   justify-content: space-between;
   align-items: center;
   /* opacity: 0; */
-  height: 40%;
-  font-size: 1.75rem;
+  height: 80%;
+  font-size: 1.5rem;
   font-weight: 900;
   transition: all 0.5s ease 0s;
   z-index: 500;
@@ -114,6 +122,11 @@
 
 .full-modal-content {
   display: flex;
+}
+
+.modal-bright {
+  color: #000;
+  background-color: #ededed;
 }
 
 
@@ -493,6 +506,35 @@ height: auto;
   font-size: var(--fs-20);
 }
 
+/* links-container */
+/* .link {
+  border-bottom: 1px solid transparent;
+} */
+
+.link:hover {
+  color: rgb(223, 186, 20);
+  border-bottom: 1px solid rgba(255, 234, 0, 0.541);
+}
+
+.no-links {
+  display: none;
+}
+
+.modal-container ul {
+  list-style: none;
+}
+
+.modal-container ul li {
+  text-decoration: none;
+  text-align: center;
+}
+
+.modal-container ul li a {
+  text-decoration: none;
+  text-align: center;
+}
+
+
 /* menu modal */
 .modal-container {
   position: fixed;
@@ -502,7 +544,7 @@ height: auto;
   align-items: center;
   top: 0;
   width: 100%;
-  height: 0%;
+  height: 100vh;
   transition: all 0.3s ease-in-out 0s;
   z-index: 200;
 }
@@ -510,6 +552,6 @@ height: auto;
 .flex {
   display: flex;
   height: 35px;
-  width: 150px;
+  width: 35px;
   border: 1px solid;
 }

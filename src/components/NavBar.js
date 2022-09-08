@@ -2,64 +2,58 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const NavBar = () => {
-  const [modalOpen, setModalOpen] = useState(false);
+  const [modalOpen, setModalOpen] = useState(true);
 
   return (
     <>
     
-    <section>
-   
-    {modalOpen ? (<nav className={`modal-container ${modalOpen ? 'full-modal-container' : ''}`} onClick={() => setModalOpen(true)}>
-    <ul className={`modal-content ${modalOpen ? 'full-modal-content' : ''}`} onClick={() => setModalOpen(true)}>
-      <li 
-      onClick={() => setModalOpen(false)}
-      >
-        <Link to='/'>Home</Link>
-      </li>
-      <li 
-      onClick={() => setModalOpen(false)}
-      >
-        <Link to='/creators'>Wassapviews Creators</Link>
-      </li>
-      <li 
-      onClick={() => setModalOpen(false)}
-      >
+    <div className={`modal-container modal-bright ${modalOpen ? 'full-modal-container' : ''}` }>
+      <ul className={`modal-content ${modalOpen ? 'full-modal-content' : ''}`}>
+        <li className= 'link' onClick={() => setModalOpen(false)}>
+          <Link to='/'>Home</Link>
+        </li>
+        <li className= 'link'
+          onClick={() => setModalOpen(false)}>
+          <Link to='/creators'>Wassapviews Creators</Link>
+        </li>
+        <li 
+          onClick={() => setModalOpen(false)}>
         <Link to='/downloads'>Downloads</Link>
       </li>
-      <li 
+      <li className= 'link'
       onClick={() => setModalOpen(false)}
       >
         <Link to='/help'>Help Center/Guide</Link>
       </li>
-      <li 
+      <li className= 'link'
       onClick={() => setModalOpen(false)}
       >
         <Link to='/howto'>How to Install the VCF File</Link>
       </li>
-      <li 
+      <li className= 'link'
       onClick={() => setModalOpen(false)}
       >
         <Link to='/TOS'>Terms of Service</Link>
       </li>
-      <li 
+      <li className= 'link'
       onClick={() => setModalOpen(false)}
       >
         <Link to='/contactus'>Contact Us</Link>
       </li>
-      <li 
+      <li className= 'link'
       onClick={() => setModalOpen(false)}
       >
         <Link to='/login'>Login</Link>
       </li>
-      <li 
+      <li className= 'link'
       onClick={() => setModalOpen(false)}
       >
         <Link to='/register'>Register</Link>
       </li>
     </ul>
-  </nav>) : ''}
+  {/* </nav>) : ''} */}
   {/* <h1>NAVBAR</h1> */}
-    </section> 
+    </div> 
     </>
   );
 };

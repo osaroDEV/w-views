@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom'
 
 const Register = () => {
     return (
@@ -32,7 +33,7 @@ const Register = () => {
             <input className='sub-input' type='text' />
           </div>
           <div className='user-bottom-flex mt100'>
-            <p className='fs14 b600 green mr50'>Already registered?</p>
+          <Link to='/login'><p className='fs14 b600 green mr50 no-under'>Already registered?</p></Link>
             <button style={{margin: 0, fontSize: '.75rem'}}>REGISTER</button>
           </div>
         </form>

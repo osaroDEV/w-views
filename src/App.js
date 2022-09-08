@@ -17,19 +17,6 @@ import Register from './components/Register'
 function App() {
   return (
     <>
-    {/* <nav>
-      <ul>
-        <li>
-          <Link to='/'>Home</Link>
-        </li>
-        <li>
-          <Link to='/creators'>Creators</Link>
-        </li>
-        <li>
-          <Link to='/TOS'>TOS</Link>
-        </li>
-      </ul>
-    </nav> */}
     <Header />
     <Routes>
       {/* <Header /> */}
