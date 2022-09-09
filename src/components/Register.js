@@ -33,7 +33,7 @@ const Register = () => {
             <input className='sub-input' type='text' />
           </div>
           <div className='user-bottom-flex mt100'>
-          <Link to='/login'><p className='fs14 b600 green mr50 no-under'>Already registered?</p></Link>
+          <Link to='/login'><p className='fs14 b600 green mr50 no-under' style={{textDecoration: 'none'}}>Already registered?</p></Link>
             <button style={{margin: 0, fontSize: '.75rem'}}>REGISTER</button>
           </div>
         </form>

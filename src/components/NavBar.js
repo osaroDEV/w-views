@@ -9,10 +9,10 @@ const NavBar = () => {
     
     <div className={`modal-container modal-bright ${modalOpen ? 'full-modal-container' : ''}` }>
       <ul className={`modal-content ${modalOpen ? 'full-modal-content' : ''}`}>
-        <li className= 'link' onClick={() => setModalOpen(false)}>
+        <li onClick={() => setModalOpen(false)}>
           <Link to='/'>Home</Link>
         </li>
-        <li className= 'link'
+        <li
           onClick={() => setModalOpen(false)}>
           <Link to='/creators'>Wassapviews Creators</Link>
         </li>
@@ -20,32 +20,32 @@ const NavBar = () => {
           onClick={() => setModalOpen(false)}>
         <Link to='/downloads'>Downloads</Link>
       </li>
-      <li className= 'link'
+      <li
       onClick={() => setModalOpen(false)}
       >
         <Link to='/help'>Help Center/Guide</Link>
       </li>
-      <li className= 'link'
+      <li
       onClick={() => setModalOpen(false)}
       >
         <Link to='/howto'>How to Install the VCF File</Link>
       </li>
-      <li className= 'link'
+      <li
       onClick={() => setModalOpen(false)}
       >
         <Link to='/TOS'>Terms of Service</Link>
       </li>
-      <li className= 'link'
+      <li
       onClick={() => setModalOpen(false)}
       >
         <Link to='/contactus'>Contact Us</Link>
       </li>
-      <li className= 'link'
+      <li
       onClick={() => setModalOpen(false)}
       >
         <Link to='/login'>Login</Link>
       </li>
-      <li className= 'link'
+      <li
       onClick={() => setModalOpen(false)}
       >
         <Link to='/register'>Register</Link>
